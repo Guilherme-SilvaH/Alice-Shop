@@ -47,7 +47,7 @@ const Header = () => {
               </li>
               <li>
                 <NavLink to="/whats">
-                  <FaWhatsapp />
+                  <FaWhatsapp className="nav__icons" />
                 </NavLink>
               </li>
             </ul>
