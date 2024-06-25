@@ -5,14 +5,16 @@
 }
 
 :root {
- --header-height: 3.5rem;
- --body-font: "Montserrat", sans-serif;
- --second-font: "Dancing Script", cursive;
- --h2-font-size: 1.25rem;
- --small-font-size: 0.813rem;
- --font-semi-bold: 600;
- --z-tooltip: 10;
- --z-fixed: 100;
+
+  --font-follow: "Arial", sans-serif;;
+  --header-height: 3rem;
+  --body-font: "Arial", sans-serif;
+  --second-font: "Dancing Script", cursive;
+  --list-font-size: 1.25rem;
+  --small-font-size: 0.813rem;
+  --font-semi-bold: 600;
+  --z-tooltip: 10;
+  --z-fixed: 100;
 }
 
 
@@ -39,6 +41,8 @@ a {
     display: flex;
     justify-content: center;
     text-align: center;
+    font-family: var(--font-follow);
+    padding: 1px;
   }
 
   .nav {
@@ -47,21 +51,45 @@ a {
     justify-content: space-between;
     position: relative;
     height: var(--header-height);
-    margin: 1rem;
+    margin: 3rem;
 
+
+    .nav__menu{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
 
     .nav__logo{
+      position: relative;
+      height: fit-content;
+
       img{
-        
-        width: 5rem;
+        width: 6.2rem;
       }
     }
 
     .nav__list{
-
       display: flex;
+      justify-content: center;
       gap: 5rem;
+      width: 80vw;
+      font-size: var(--list-font-size);
     }
+
+
+    .div_icons{
+      display: flex;
+      list-style: none;
+      font-size: 1.5rem;
+      gap: 1rem;
+      
+      .nav__icon{
+        
+      }
+    }
+
 
   }
 }

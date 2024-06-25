@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { IoClose, IoMenu } from "react-icons/io5";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import logo from "../../assets/IMG_4852.svg";
 import "./Header.scss";
 
@@ -36,6 +38,20 @@ const Header = () => {
               </NavLink>
             </li>
           </ul>
+          <div>
+            <ul className="div_icons">
+              <li>
+                <NavLink to="/instagram">
+                  <FaInstagram className="nav__icons" />
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/whats">
+                  <FaWhatsapp />
+                </NavLink>
+              </li>
+            </ul>
+          </div>
           <div className="nav__close" id="nav-close">
             <IoClose />
           </div>
