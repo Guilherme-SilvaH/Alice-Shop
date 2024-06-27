@@ -1,63 +1,68 @@
 import { NavLink } from "react-router-dom";
-import { IoClose, IoMenu } from "react-icons/io5";
-import { FaWhatsapp } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
+
+import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 import logo from "../../assets/IMG_4852.svg";
+import { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./Header.scss";
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <header className="header">
       <div className="follow-insta">
         <h5>Siga-nos no Instagram @byalicegaldino</h5>
       </div>
-      <nav className="nav container">
-        <NavLink to="/" className="nav__logo">
-          <img src={logo}></img>
+      <nav className="navbar navbar-expand-lg navbar-light custom-navbar">
+        <NavLink to="/" className="navbar-brand">
+          <img src={logo} alt="Logo" />
         </NavLink>
-        <div className={"nav__menu"} id="nav-menu">
-          <ul className="nav__list">
-            <li className="nav__item">
-              <NavLink to="/" className="nav__link">
+        <button className="navbar-toggler" type="button" onClick={toggleMenu}>
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div
+          className={`collapse navbar-collapse ${menuOpen ? "show" : ""}`}
+          id="navbarNav"
+        >
+          <ul className="navbar-nav mx-auto">
+            <li className="nav-item">
+              <NavLink to="/" className="nav-link">
                 HOME
               </NavLink>
             </li>
-            <li className="nav__item">
-              <NavLink to="/produtos" className="nav__link">
+            <li className="nav-item">
+              <NavLink to="/produtos" className="nav-link">
                 PRODUTOS
               </NavLink>
             </li>
-            <li className="nav__item">
-              <NavLink to="/sobre" className="nav__link">
+            <li className="nav-item">
+              <NavLink to="/sobre" className="nav-link">
                 SOBRE
               </NavLink>
             </li>
-            <li className="nav__item">
-              <NavLink to="/contato" className="nav__link">
+            <li className="nav-item">
+              <NavLink to="/contato" className="nav-link">
                 CONTATO
               </NavLink>
             </li>
           </ul>
-          <div>
-            <ul className="div_icons">
-              <li>
-                <NavLink to="/instagram">
-                  <FaInstagram className="nav__icons" />
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/whats">
-                  <FaWhatsapp className="nav__icons" />
-                </NavLink>
-              </li>
-            </ul>
-          </div>
-          <div className="nav__close" id="nav-close">
-            <IoClose />
-          </div>
-        </div>
-        <div className="nav__toggle" id="nav-toggle">
-          <IoMenu />
+          <ul className="navbar-nav navbar-icons">
+            <li className="nav-item">
+              <NavLink to="/instagram" className="nav-link">
+                <FaInstagram />
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/whats" className="nav-link">
+                <FaWhatsapp />
+              </NavLink>
+            </li>
+          </ul>
         </div>
       </nav>
     </header>

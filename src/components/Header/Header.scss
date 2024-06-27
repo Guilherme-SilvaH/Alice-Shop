@@ -1,8 +1,4 @@
-* {
- box-sizing: border-box;
- padding: 0;
- margin: 0;
-}
+
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap');
@@ -25,95 +21,101 @@
 
 }
 
-
-
-
-ul {
- list-style: none;
+.custom-navbar {
+  background-color: transparent !important;
 }
 
-a {
- text-decoration: none;
-}
 
 .header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 1000;
   background-color: transparent;
-  z-index: var(--z-fixed);
-  
 
-  .follow-insta{
+  .follow-insta {
     background-color: black;
-    color: var(--color-white1);
+    color: white;
     align-items: center;
     display: flex;
     justify-content: center;
     text-align: center;
-    font-family: var(--font-follow);
-    padding: 10px;
+    font-family: "Barlow", sans-serif;
+    padding: 5px;
     font-size: 1.2rem;
   }
 
-  .nav {
+  .navbar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    position: relative;
-    height: var(--header-height);
-    margin: 3rem;
+    align-items: center;
+    padding: 0rem 3rem;
+    background-color: transparent;
+    
 
+    .navbar-brand {
+      flex: 1;
 
-    .nav__menu{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-  
-    }
-
-    .nav__logo{
-      position: relative;
-      height: fit-content;
-
-      img{
+      img {
         width: 6.2rem;
       }
     }
 
-    .nav__list{
+    .navbar-nav {
       display: flex;
+      flex: 1;
       justify-content: center;
-      gap: 5rem;
-      width: 80vw;
-      font-weight: 500;
-      font-size: var(--list-font-size);
-      font-family: var(--body-font);
-      
-      
-    }
+    
 
-    .nav__link{
-      text-decoration: none;
-      color: var(--color-night);
-    }
+      .nav-item {
+        margin-left: 2rem;
 
+        .nav-link {
+          font-family: "Montserrat", sans-serif;
+          font-weight: 500;
+          color: var(--color-wichblack);
+          font-size: 1.25rem;
 
-    .div_icons{
-      display: flex;
-      list-style: none;
-      font-size: 1.5rem;
-      gap: 1rem;
-
-      
-      .nav__icons{
-        text-decoration: none;
-        color: var(--color-night);
+          &:hover {
+            color: var(--color-khaki);
+          }
+        }
       }
     }
 
+    .navbar-icons {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
 
+      .nav-item {
+        margin-left: 1rem;
+
+        .nav-link {
+          font-size: 1.5rem;
+          color: var(--color-night);
+
+          &:hover {
+            color: var(--color-khaki);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 1150px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-item {
+    margin-left: 0;
+    margin-bottom: 1rem;
+    align-items: center
   }
 }
