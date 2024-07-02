@@ -1,0 +1,28 @@
+
+
+
+.row {
+    padding: 30px;
+    --bs-gutter-x: 0
+}
+
+
+.container-send{
+    width: 100%;
+    background-color: #f8f9fa;
+    height: 120px;
+    
+    .col-4 {
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+
+        p{
+            color: red;
+        }
+}       
+
+}
