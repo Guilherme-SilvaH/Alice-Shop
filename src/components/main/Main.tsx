@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Carousel,
   CarouselItem,
@@ -8,7 +8,7 @@ import {
   CarouselIndicators,
   CarouselCaption,
 } from "reactstrap";
-import banner from "../../assets/freepik-new-project-20240702185607hc6L.png";
+import banner from "../../assets/LEGACY.png";
 import "./Main.scss"; // Certifique-se de importar o CSS correto
 
 const items = [
@@ -35,6 +35,7 @@ const items = [
 function Example(args: any) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
+  const [carouselInterval, setCarouselInterval] = useState<number | null>(3000);
 
   const next = () => {
     if (animating) return;
@@ -52,6 +53,16 @@ function Example(args: any) {
     if (animating) return;
     setActiveIndex(newIndex);
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      next();
+    }, carouselInterval || 5000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [activeIndex, carouselInterval]);
 
   const slides = items.map((item) => {
     return (
@@ -76,6 +87,7 @@ function Example(args: any) {
         next={next}
         previous={previous}
         {...args}
+        interval={false} // Desativa o intervalo automático do Bootstrap para controlar manualmente com useEffect
       >
         <CarouselIndicators
           items={items}
