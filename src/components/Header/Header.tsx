@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-
 import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 import logo from "../../assets/IMG_4852.svg";
 import { useState } from "react";
