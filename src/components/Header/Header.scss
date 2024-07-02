@@ -5,7 +5,7 @@
 
 :root {
   --font-follow: "Barlow", sans-serif;;
-  --header-height: 3rem;
+  --header-height: 25vh;
   --body-font: "Montserrat", sans-serif;
   --second-font: "Dancing Script", cursive;
   --list-font-size: 1.25rem;
@@ -23,14 +23,12 @@
 
 .custom-navbar {
   background-color: transparent !important;
+  
 }
 
 
 .header {
   width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
   background-color: transparent;
 
   .follow-insta {
@@ -42,7 +40,11 @@
     text-align: center;
     font-family: "Barlow", sans-serif;
     padding: 5px;
-    font-size: 1.2rem;
+
+    h5{
+      font-size: 1rem;
+    }
+
   }
 
   .navbar {
