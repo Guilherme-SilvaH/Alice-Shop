@@ -1,4 +1,4 @@
-import { CardData } from "../hooks/CardsContext";
+import { CardData } from "@hooks/CardsContext";
 
 export const cards: CardData[] = [
   {
@@ -12,7 +12,7 @@ export const cards: CardData[] = [
   {
     id: 2,
     title: "Camiseta 2",
-    imageUrl: "https://example.com/assets/LEGACY.png", // Corrigido o caminho da imagem
+    imageUrl: "https://example.com/assets/LEGACY.png",
     text: "Exemplo de texto para a Camiseta 2",
     phoneNumber: "19995681352",
     productLink: "/card/2",
@@ -20,7 +20,7 @@ export const cards: CardData[] = [
   {
     id: 3,
     title: "Camiseta 3",
-    imageUrl: "https://example.com/assets/LEGACY.png", // Corrigido o caminho da imagem
+    imageUrl: "https://example.com/assets/LEGACY.png",
     text: "Exemplo de texto para a Camiseta 3",
     phoneNumber: "19995681352",
     productLink: "/card/3",

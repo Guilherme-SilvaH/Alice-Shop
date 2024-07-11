@@ -4,7 +4,7 @@ import Header from "../components/Header/Header";
 import CardsContainer from "../components/CardsContainer/CardsContainer";
 import CardDetails from "../components/Pages/CardDetails";
 import { cards } from "../data/cardsData";
-import { CardsProvider } from "../hooks/CardsContext";
+import { CardsProvider } from "@hooks/CardsContext";
 
 function App() {
   return (
