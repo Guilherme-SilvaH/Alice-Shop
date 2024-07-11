@@ -35,7 +35,7 @@ const items = [
 function Example(args: any) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
-  const [carouselInterval, setCarouselInterval] = useState<number | null>(3000);
+  const [carouselInterval] = useState<number | null>(3000);
 
   const next = () => {
     if (animating) return;
@@ -62,6 +62,7 @@ function Example(args: any) {
     return () => {
       clearInterval(interval);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeIndex, carouselInterval]);
 
   const slides = items.map((item) => {
