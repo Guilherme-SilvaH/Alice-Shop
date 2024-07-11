@@ -18,7 +18,7 @@ const Card: React.FC<CardProps> = ({
   phoneNumber,
 }) => {
   const handleButtonClick = () => {
-    const message = `*${title}*\n${text}\n\n${window.location.origin}${productLink}`;
+    const message = `*${title}*\n${text}\${productLink}`;
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       message
     )}`;
@@ -29,7 +29,7 @@ const Card: React.FC<CardProps> = ({
   return (
     <div className="Card">
       <h3>{title}</h3>
-      <img src={imageUrl} alt={title} />
+      <img src={imageUrl} alt={title} width={"300vw"} />
       <p>{text}</p>
       {/* Renderiza o link para detalhes do produto */}
       <Link to={productLink}>Ver detalhes</Link>

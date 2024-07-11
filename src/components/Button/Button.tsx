@@ -5,7 +5,11 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({ onClick }) => {
-  return <button onClick={onClick}></button>;
+  return (
+    <button className="btn-container" onClick={onClick}>
+      Comprar
+    </button>
+  );
 };
 
 export default Button;
