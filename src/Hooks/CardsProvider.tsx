@@ -4,7 +4,7 @@ import { CardData } from "src/Interface/ICardData.tsx";
 // Define a interface para os dados do card
 
 // Criação do contexto
-const CardsContext = createContext<CardData[]>([]);
+export const CardsContext = createContext<CardData[]>([]);
 
 // Provedor do contexto para envolver sua aplicação
 interface CardsProviderProps {
@@ -18,5 +18,7 @@ export const CardsProvider: React.FC<CardsProviderProps> = ({
 }) => <CardsContext.Provider value={cards}>{children}</CardsContext.Provider>;
 
 // Hook personalizado para acessar o contexto dos cards
-// eslint-disable-next-line react-refresh/only-export-components
-export const useCards = () => useContext(CardsContext);
+// eslint-disable-next-line react-hooks/rules-of-hooks
+export function useCards() {
+  return useContext(CardsContext);
+}

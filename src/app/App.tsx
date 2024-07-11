@@ -3,8 +3,8 @@ import Home from "../Components/Pages/Home";
 import Header from "../Components/Header/Header";
 import CardsContainer from "../Components/CardsContainer/CardsContainer";
 import CardDetails from "../Components/Pages/CardDetails";
-import { Cards } from "../Data/CardsData";
-import { CardsProvider } from "../Hooks/CardsProvider"; // Ajuste no caminho de importação
+import { Cards } from "src/Data/CardsData";
+import { CardsProvider } from "@hooks/CardsProvider";
 
 function App() {
   return (
