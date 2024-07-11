@@ -1,5 +1,5 @@
 import Card from "../Card/Card";
-import { useCards } from "../../Hooks/CardsContext";
+import { useCards } from "../../hooks/CardsContext";
 
 const CardsContainer = () => {
   const cards = useCards();
@@ -12,8 +12,8 @@ const CardsContainer = () => {
             title={card.title}
             imageUrl={card.imageUrl}
             text={card.text}
-            phoneNumber={card.phoneNumber}
             productLink={card.productLink}
+            phoneNumber="1995681352"
           />
         </div>
       ))}

@@ -16,7 +16,7 @@ const CardsContext = createContext<CardData[]>([]);
 // Provedor do contexto para envolver sua aplicação
 interface CardsProviderProps {
   cards: CardData[];
-  children?: React.ReactNode; // Definindo children como opcional
+  children?: React.ReactNode;
 }
 
 export const CardsProvider: React.FC<CardsProviderProps> = ({
