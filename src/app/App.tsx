@@ -3,18 +3,18 @@ import Home from "../components/Pages/Home";
 import Header from "../components/Header/Header";
 import CardsContainer from "../components/CardsContainer/CardsContainer";
 import CardDetails from "../components/Pages/CardDetails";
-import { cards } from "../data/cardsData";
 import { CardsProvider } from "@hooks/CardsContext";
+import { Cards } from "../data/CardsData";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <CardsProvider cards={cards}>
+      <CardsProvider cards={Cards}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cards" element={<CardsContainer />} />
-          {cards.map((card) => (
+          {Cards.map((card) => (
             <Route
               key={card.id}
               path={card.productLink}
