@@ -32,7 +32,7 @@ const items = [
   },
 ];
 
-function Main(args: any) {
+function Carrosel(args: any) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [carouselInterval] = useState<number | null>(3000);
@@ -111,4 +111,4 @@ function Main(args: any) {
   );
 }
 
-export default Main;
+export default Carrosel;
