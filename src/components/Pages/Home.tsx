@@ -1,6 +1,6 @@
-import Carrosel from "../Carrosel/Carrosel";
-import Send from "../Send/Send";
-import CardsContainer from "../CardsContainer/CardsContainer";
+import Carrosel from "../Carrosel/Carrosel.tsx";
+import Send from "../Send/Send.tsx";
+import CardsContainer from "../CardsContainer/CardsContainer.tsx";
 
 const Home = () => (
   <>

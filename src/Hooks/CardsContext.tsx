@@ -1,14 +1,7 @@
 import React, { createContext, useContext } from "react";
+import { CardData } from "src/Interface/ICardData.tsx";
 
 // Define a interface para os dados do card
-export interface CardData {
-  id: number;
-  title: string;
-  imageUrl: string;
-  text: string;
-  phoneNumber: string;
-  productLink: string;
-}
 
 // Criação do contexto
 const CardsContext = createContext<CardData[]>([]);

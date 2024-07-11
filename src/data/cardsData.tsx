@@ -1,4 +1,4 @@
-import { CardData } from "src/Hooks/CardsContext";
+import { CardData } from "src/Interface/ICardData.tsx";
 
 export const Cards: CardData[] = [
   {
