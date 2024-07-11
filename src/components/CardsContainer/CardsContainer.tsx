@@ -1,22 +1,18 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import React from "react";
+import { useCards, CardData } from "../../hooks/CardsContext";
 
-import Card from "../Card/Card";
-import { useCards } from "../../hooks/CardsContext";
-
-const CardsContainer = () => {
+const CardsContainer: React.FC = () => {
   const cards = useCards();
 
   return (
-    <div className="CardContainer">
-      {cards.map((card) => (
-        <div className={`card-${card.id}`} key={card.id}>
-          <Card
-            title={card.title}
-            imageUrl={card.imageUrl}
-            text={card.text}
-            productLink={card.productLink}
-            phoneNumber="1995681352"
-          />
+    <div>
+      {cards.map((card: CardData) => (
+        <div key={card.id}>
+          <h2>{card.title}</h2>
+          <img src={card.imageUrl} alt={card.title} />
+          <p>{card.text}</p>
+          <a href={`tel:${card.phoneNumber}`}>Call</a>
+          <a href={card.productLink}>Product Link</a>
         </div>
       ))}
     </div>
