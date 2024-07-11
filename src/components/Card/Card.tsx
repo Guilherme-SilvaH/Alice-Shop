@@ -18,7 +18,7 @@ const Card: React.FC<CardProps> = ({
   phoneNumber,
 }) => {
   const handleButtonClick = () => {
-    const message = `*${title}*\n${text}\${productLink}`;
+    const message = `*${title}*\n${text}\n\n${window.location.origin}${productLink}`;
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       message
     )}`;

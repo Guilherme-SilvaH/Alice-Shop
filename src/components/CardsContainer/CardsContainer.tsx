@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 
-import Card from "../Card/Card";
 import { CardData, useCards } from "../../hooks/CardsContext";
+import Card from "../Card/Card";
 
 const CardsContainer = () => {
   const cards = useCards();
