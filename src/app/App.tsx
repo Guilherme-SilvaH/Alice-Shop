@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "../Components/Pages/Home.tsx";
-import Header from "../Components/Header/Header.tsx";
-import CardsContainer from "../Components/CardsContainer/CardsContainer.tsx";
-import CardDetails from "../Components/Pages/CardDetails.tsx";
-import { Cards } from "../Data/CardsData.tsx";
-import { CardsProvider } from "src/Hooks/CardsContext.tsx";
+import Home from "../Components/Pages/Home";
+import Header from "../Components/Header/Header";
+import CardsContainer from "../Components/CardsContainer/CardsContainer";
+import CardDetails from "../Components/Pages/CardDetails";
+import { Cards } from "../Data/CardsData";
+import { CardsProvider } from "../Hooks/CardsProvider"; // Ajuste no caminho de importação
 
 function App() {
   return (

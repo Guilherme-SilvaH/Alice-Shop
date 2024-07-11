@@ -1,4 +1,4 @@
-import { useCards } from "src/Hooks/CardsContext";
+import { useCards } from "src/Hooks/CardsProvider";
 import Card from "../Card/Card";
 import { CardData } from "src/Interface/ICardData.tsx";
 
