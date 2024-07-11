@@ -25,4 +25,5 @@ export const CardsProvider: React.FC<CardsProviderProps> = ({
 }) => <CardsContext.Provider value={cards}>{children}</CardsContext.Provider>;
 
 // Hook personalizado para acessar o contexto dos cards
+// eslint-disable-next-line react-refresh/only-export-components
 export const useCards = () => useContext(CardsContext);
