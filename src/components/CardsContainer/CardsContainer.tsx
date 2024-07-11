@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 import Card from "../Card/Card";
 import { useCards } from "../../hooks/CardsContext";
 
@@ -7,7 +9,7 @@ const CardsContainer = () => {
   return (
     <div className="CardContainer">
       {cards.map((card) => (
-        <div className={`card${card.id}`} key={card.id}>
+        <div className={`card-${card.id}`} key={card.id}>
           <Card
             title={card.title}
             imageUrl={card.imageUrl}
