@@ -1,6 +1,7 @@
 import { CardData } from "../hooks/CardsContext";
 
 
+
 export const cards: CardData[] = [
   {
     id: 1,
