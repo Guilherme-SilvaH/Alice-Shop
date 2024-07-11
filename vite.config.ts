@@ -6,8 +6,8 @@ export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   resolve: {
     alias: {
-      '@hooks': '/src/hooks',
-      '@components': '/src/components',
+      '@hooks': '/src/Hooks',
+      '@components': '/src/Components',
     },
   },
 });
