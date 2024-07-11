@@ -1,4 +1,4 @@
-import { CardData, useCards } from "@hooks/CardsContext";
+import { CardData, useCards } from "src/Hooks/CardsContext";
 import Card from "../Card/Card";
 
 const CardsContainer = () => {

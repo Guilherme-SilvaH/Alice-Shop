@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "../components/Pages/Home";
-import Header from "../components/Header/Header";
-import CardsContainer from "../components/CardsContainer/CardsContainer";
-import CardDetails from "../components/Pages/CardDetails";
-import { CardsProvider } from "@hooks/CardsContext";
-import { Cards } from "../data/CardsData";
+import Home from "../Components/Pages/Home";
+import Header from "../Components/Header/Header";
+import CardsContainer from "../Components/CardsContainer/CardsContainer";
+import CardDetails from "../Components/Pages/CardDetails";
+import { CardsProvider } from "src/Hooks/CardsContext";
+import { Cards } from "../Data/CardsData";
 
 function App() {
   return (

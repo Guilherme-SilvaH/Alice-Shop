@@ -1,4 +1,4 @@
-import { CardData } from "@hooks/CardsContext";
+import { CardData } from "src/Hooks/CardsContext";
 
 export const Cards: CardData[] = [
   {
