@@ -1,6 +1,5 @@
 import { CardData } from "../hooks/CardsContext";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import img from "../assets/LEGACY.png"
+
 
 export const cards: CardData[] = [
   {
