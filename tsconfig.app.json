@@ -26,8 +26,8 @@
     /* Path mapping */
     "baseUrl": "./",
     "paths": {
-      "@hooks/*": ["src/Hooks/*"],
-      "@components/*": ["src/Components/*"]
+      "@hooks/*": ["src/Hooks/"],
+      "@components/*": ["src/Components/"]
     }
   },
   "include": ["src"]

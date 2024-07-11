@@ -4,7 +4,7 @@ import Header from "../Components/Header/Header.tsx";
 import CardsContainer from "../Components/CardsContainer/CardsContainer.tsx";
 import CardDetails from "../Components/Pages/CardDetails.tsx";
 import { Cards } from "../Data/CardsData.tsx";
-import { CardsProvider } from "@hooks/CardsContext.tsx";
+import { CardsProvider } from "src/Hooks/CardsContext.tsx";
 
 function App() {
   return (
