@@ -1,9 +1,9 @@
-import CardsContainer from "@/Components/CardsContainer/CardsContainer";
-import Header from "@/Components/Header/Header";
-import CardDetails from "@/Components/Pages/CardDetails";
-import Home from "@/Components/Pages/Home";
-import { Cards } from "@/Data/CardsData";
-import { CardsProvider } from "@/Hooks/CardsProvider";
+import CardsContainer from "../Components/CardsContainer/CardsContainer";
+import Header from "../Components/Header/Header";
+import CardDetails from "../Components/Pages/CardDetails";
+import Home from "../Components/Pages/Home";
+import { Cards } from "../Data/CardsData";
+import { CardsProvider } from "../Hooks/CardsProvider";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
