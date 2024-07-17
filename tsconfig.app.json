@@ -24,12 +24,7 @@
     "noFallthroughCasesInSwitch": true,
 
     /* Path mapping */
-    "baseUrl": "./",
-    "paths": {
-      "@/*": ["src/*"],
-      "@hooks/*": ["src/Hooks/*"],
-      "@components/*": ["src/Components/*"]
-    }
+    "baseUrl": "./"
   },
-  "include": ["src"]
+  "include": ["src", "app"]
 }
