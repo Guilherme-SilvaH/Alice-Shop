@@ -8,7 +8,6 @@ import {
   CarouselIndicators,
   CarouselCaption,
 } from "reactstrap";
-import banner from "../../assets/LEGACY.png";
 import "./Main.scss"; // Certifique-se de importar o CSS correto
 
 const items = [
