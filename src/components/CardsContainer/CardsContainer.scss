@@ -1,0 +1,27 @@
+.CardContainer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        padding: 10rem;
+        width: 100%;
+        justify-content: center;
+        align-items: stretch; // Garante que todos os cartões tenham a mesma altura
+    }
+
+    .card {
+        flex: 0 1 calc(33.333% - 2rem);
+        box-sizing: border-box;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column; // Permite que o conteúdo interno se ajuste verticalmente
+        justify-content: space-between; // Espaça o conteúdo interno uniformemente
+        min-height: 15rem; // Define uma altura mínima para os cartões
+    }
+}

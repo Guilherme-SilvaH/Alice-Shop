@@ -13,7 +13,7 @@ function App() {
       <CardsProvider cards={Cards}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/cards" element={<CardsContainer />} />
+          <Route path="/produtos" element={<CardsContainer />} />
           {Cards.map((card) => (
             <Route
               key={card.id}
